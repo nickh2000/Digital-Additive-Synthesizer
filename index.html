@@ -1,8 +1,53 @@
----
-layout: default
-title: Hank Quinlan, Horrible Cop
----
-<div class="blurb">
-	<h1>Hi there, I'm Hank Quinlan!</h1>
-	<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-</div><!-- /.blurb -->
+<!DOCTYPE html><html lang="en"><head>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+  </head>
+  
+  <body>
+    
+    <p> Press Enter to start oscillator, Press any key to play a note </p>
+    <h1> Waves </h1>
+    
+    <div id="carriers" class="container">
+      
+      <div>       
+
+        
+        <!---Frequency Slider-->
+        <input min="1" max="5000" value="440" id="freq">
+        <label for="freq" id="freqLabel"> 440 Hz </label>
+
+        
+        <!---Volume Slider-->
+        <input min="0" max="100" value="0" id="vol">
+        <label for="vol" id="volLabel"> 0% </label>
+
+        
+        <!---Shape Slider-->
+        <input min="0" max="3" value="0" id="shape" type="range">
+        <label for="shape" id="shapeLabel"> Sine </label>
+
+        
+        <!---Mute Button-->
+        <button id="mute"> Mute </button>
+
+        <br><br>
+      </div>
+    </div>
+    
+    <!--Buttons--->
+    <button id="addWave" onclick="addWave()"> Add Wave </button> 
+    <button id="removeWave" onclick="removeWave()"> Remove Wave </button>
+
+    
+    
+    <!--Where our actual code runs-->
+    <script src="sketch.js"></script>
+    
+    
+    
+    
+  
+</body></html>
