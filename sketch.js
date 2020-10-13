@@ -20,7 +20,7 @@ async function wait() {
 function setup() {
 
   //set screen size
-  let cnv = createCanvas(windowWidth, 256);
+  let cnv = createCanvas(windowWidth, windowHeight);
 
   //create the first wave
   first = new Wave();
